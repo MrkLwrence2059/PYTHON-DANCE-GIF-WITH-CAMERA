@@ -43,3 +43,57 @@ Watermark/ownership:
 ## Notes
 - First run may download MediaPipe model files into `assets/models/`.
 - If camera does not open, close other apps using webcam and run again.
+
+## Git + GitHub Guide (For Any Project)
+
+Use this for future projects so they are saved to your GitHub account.
+
+### 1) One-time setup (new PC only)
+```powershell
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+```
+
+### 2) Publish a brand-new project folder
+1. Create an empty repository on GitHub first (no README, no license).
+2. In PowerShell, open your project folder:
+   ```powershell
+   cd "C:\path\to\your\project"
+   ```
+3. Initialize git and commit:
+   ```powershell
+   git init -b main
+   git add .
+   git commit -m "Initial commit"
+   ```
+4. Connect to GitHub and push:
+   ```powershell
+   git remote add origin https://github.com/<your-username>/<repo-name>.git
+   git push -u origin main
+   ```
+
+### 3) Update an existing project and push new changes
+```powershell
+cd "C:\path\to\your\project"
+git add .
+git commit -m "Describe your changes"
+git push
+```
+
+### 4) Check if everything is linked correctly
+```powershell
+git status
+git branch --show-current
+git remote -v
+```
+
+### 5) Helpful fixes
+- If `origin` is wrong:
+  ```powershell
+  git remote set-url origin https://github.com/<your-username>/<repo-name>.git
+  ```
+- If repo has no `main` branch yet:
+  ```powershell
+  git branch -M main
+  git push -u origin main
+  ```
